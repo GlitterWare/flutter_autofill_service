@@ -102,7 +102,6 @@ class FlutterAutofillService : AutofillService() {
         callback: FillCallback
     ) {
         logger.info { "Got fill request $request" }
-        println("hello world")
 
         val context = request.fillContexts.last()
         val parser = AssistStructureParser(context.structure)
@@ -201,7 +200,7 @@ class FlutterAutofillService : AutofillService() {
                 this,
                 1230,
                 startAuthIntent,
-                PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE
+                PendingIntent.FLAG_CANCEL_CURRENT
             )
         }
         val intentSender: IntentSender = pendingIntent.intentSender
