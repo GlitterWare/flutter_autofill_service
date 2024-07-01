@@ -67,14 +67,7 @@ object InlinePresentationHelper {
         pendingIntent: PendingIntent?,
         context: Context
     ): PendingIntent =
-        pendingIntent ?: if (Build.VERSION.SDK_INT >= 34) {
-            PendingIntent.getService(
-                context,
-                0,
-                Intent(),
-                PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_ALLOW_UNSAFE_IMPLICIT_INTENT
-            )
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        pendingIntent ?: if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             PendingIntent.getService(
                 context,
                 0,

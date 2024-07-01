@@ -188,14 +188,7 @@ class FlutterAutofillService : AutofillService() {
         )
         //startAuthIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK) Can't start new task cos results will never be returned
         val pendingIntent: PendingIntent
-        if (Build.VERSION.SDK_INT >= 34) {
-            pendingIntent = PendingIntent.getActivity(
-                this,
-                1230,
-                startAuthIntent,
-                PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_ALLOW_UNSAFE_IMPLICIT_INTENT
-            )
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             pendingIntent = PendingIntent.getActivity(
                 this,
                 1230,

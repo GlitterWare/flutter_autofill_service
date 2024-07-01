@@ -379,14 +379,7 @@ class FlutterAutofillPluginImpl(val context: Context) : MethodCallHandler,
                 null
             )
             val intentSender: IntentSender
-            if (Build.VERSION.SDK_INT >= 34) {
-                intentSender = PendingIntent.getActivity(
-                    context,
-                    1230,
-                    startIntent,
-                    PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_ALLOW_UNSAFE_IMPLICIT_INTENT
-                ).intentSender
-            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 intentSender = PendingIntent.getActivity(
                     context,
                     1230,
