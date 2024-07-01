@@ -102,6 +102,7 @@ class FlutterAutofillService : AutofillService() {
         callback: FillCallback
     ) {
         logger.info { "Got fill request $request" }
+        println("hello world")
 
         val context = request.fillContexts.last()
         val parser = AssistStructureParser(context.structure)
