@@ -67,9 +67,7 @@ object InlinePresentationHelper {
       context: Context
     ): PendingIntent {
         val explicitIntent = Intent()
-        explicitIntent.apply {
-            package = context.packageName
-        }
+        explicitIntent.apply(context.packageName)
         return explicitIntent
     }
 
