@@ -18,7 +18,9 @@ object IntentHelpers {
         )
         if (Build.VERSION.SDK_INT >= 34) {
             // Make the intent explicit to allow mutability
-            startIntent.setPackage(context.packageName)
+            startIntent.apply {
+                package = context.packageName
+            }
         }
 
         // Note: Do not make a pending intent immutable by using PendingIntent.FLAG_IMMUTABLE
