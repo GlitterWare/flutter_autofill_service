@@ -79,7 +79,7 @@ object InlinePresentationHelper {
             PendingIntent.getService(
                 context,
                 0,
-                getExplicitIntent(),
+                getExplicitIntent(context),
                 PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE
             )
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
