@@ -199,7 +199,7 @@ class FlutterAutofillService : AutofillService() {
                 this,
                 1230,
                 startAuthIntent,
-                PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_ALLOW_UNSAFE_IMPLICIT_INTENT
             )
         } else {
             @SuppressLint("UnspecifiedImmutableFlag")
@@ -207,7 +207,7 @@ class FlutterAutofillService : AutofillService() {
                 this,
                 1230,
                 startAuthIntent,
-                PendingIntent.FLAG_CANCEL_CURRENT
+                PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_ALLOW_UNSAFE_IMPLICIT_INTENT
             )
         }
         val intentSender: IntentSender = pendingIntent.intentSender
