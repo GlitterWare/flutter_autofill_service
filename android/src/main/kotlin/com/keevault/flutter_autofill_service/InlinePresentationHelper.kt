@@ -65,7 +65,7 @@ object InlinePresentationHelper {
 
     private fun getExplicitIntent(
       context: Context
-    ): PendingIntent {
+    ): Intent {
         val explicitIntent = Intent()
         explicitIntent.apply(context.packageName)
         return explicitIntent
