@@ -383,7 +383,7 @@ class FlutterAutofillPluginImpl(val context: Context) : MethodCallHandler,
                 intentSender = PendingIntent.getActivity(
                     this,
                     1230,
-                    startAuthIntent,
+                    startIntent,
                     PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_ALLOW_UNSAFE_IMPLICIT_INTENT
                 ).intentSender
             } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
