@@ -384,7 +384,7 @@ class FlutterAutofillPluginImpl(val context: Context) : MethodCallHandler,
                     context,
                     1230,
                     startIntent,
-                    PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_ALLOW_UNSAFE_IMPLICIT_INTENT
+                    PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE
                 ).intentSender
             } else {
                 @SuppressLint("UnspecifiedImmutableFlag")
